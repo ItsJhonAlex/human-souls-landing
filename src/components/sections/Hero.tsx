@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="absolute inset-0 opacity-20"></div>
       
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-                  <div className="text-center lg:text-left space-y-6 lg:space-y-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Únete a la primera
-              <span className="bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent"> red social </span>
-              de transformación humana
+                  <div className="text-center lg:text-left space-y-8 lg:space-y-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-relaxed tracking-wide">
+              <span className="block mb-2 lg:mb-4 tracking-wider">Únete a la primera</span>
+              <span className="bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent tracking-wide"> red social </span>
+              <span className="block mt-2 lg:mt-4 tracking-wider">de transformación humana</span>
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed px-4 lg:px-0">

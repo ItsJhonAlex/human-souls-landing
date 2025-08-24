@@ -61,8 +61,10 @@ const Benefits = () => {
         </div>
 
         <div className="text-center px-4">
-          <Button variant="hero" size="lg" className="w-full sm:w-auto max-w-md mx-auto">
-            <span className="text-center">Forma parte del movimiento que transforma vidas</span>
+          <Button variant="hero" size="lg" className="w-full sm:w-auto max-w-sm mx-auto min-h-[60px] sm:min-h-[48px]">
+            <span className="text-sm sm:text-base leading-tight px-2 break-words hyphens-auto">
+              Forma parte del movimiento que transforma vidas
+            </span>
           </Button>
         </div>
       </div>
