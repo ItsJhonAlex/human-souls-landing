@@ -30,20 +30,20 @@ const SoulBuddy = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             ¿Quieres ser parte del equipo de Soul Buddies?
           </h2>
-          <p className="text-xl text-muted-foreground mb-6">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-6 px-4">
             Comparte tu talento y acompaña a otros en su camino de transformación.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-card border-0">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
               <div className="mb-8">
                 <p className="text-lg leading-relaxed mb-6">
                   En Human Souls creemos que el conocimiento se multiplica cuando se comparte.
@@ -62,7 +62,7 @@ const SoulBuddy = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
                 <div>
                   <h3 className="font-bold text-xl mb-4">Beneficios de ser Soul Buddy</h3>
                   <ul className="space-y-3">
@@ -78,7 +78,7 @@ const SoulBuddy = () => {
                 <div className="space-y-4">
                   <h3 className="font-bold text-xl mb-4">Formulario de Postulación</h3>
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="nombre">Nombre</Label>
                         <Input id="nombre" placeholder="Tu nombre" />

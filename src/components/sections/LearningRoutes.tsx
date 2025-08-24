@@ -4,22 +4,22 @@ import { ArrowRight, BookOpen, Lightbulb, Users, Sparkles } from "lucide-react";
 
 const LearningRoutes = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 sm:py-16 lg:py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Rutas de Aprendizaje
           </h2>
-          <p className="text-xl text-muted-foreground mb-4">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-4 px-4">
             Tu camino, paso a paso
           </p>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg max-w-3xl mx-auto px-4">
             Avanza desde lo básico hasta el nivel experto con itinerarios claros y motivadores. 
             Recorridos temáticos que combinan cursos, cápsulas y prácticas.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           <Card className="shadow-card hover:scale-105 transition-all duration-300 border-2 border-primary/20">
             <CardContent className="p-6">
               <BookOpen className="h-12 w-12 text-primary mb-4" />

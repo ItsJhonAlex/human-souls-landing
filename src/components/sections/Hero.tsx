@@ -1,38 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-character.svg";
+import heroImage from "@/assets/hero-character.png";
 
 const Hero = () => {
   return (
-    <section className="relative gradient-hero min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section className="relative gradient-hero min-h-[80vh] sm:min-h-screen flex items-center justify-center px-4 overflow-hidden">
       <div className="absolute inset-0 opacity-20"></div>
       
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="text-center lg:text-left space-y-8">
-          <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-            Únete a la primera
-            <span className="bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent"> red social </span>
-            de transformación humana
-          </h1>
-          
-          <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-            Descubre cómo, al crecer y aprender en comunidad, creamos un mundo de infinitas posibilidades. 
-            Lo digital y lo humano se fusionan para que descubras tus talentos y te conviertas en un agente de cambio real.
-          </p>
+                  <div className="text-center lg:text-left space-y-6 lg:space-y-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+              Únete a la primera
+              <span className="bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent"> red social </span>
+              de transformación humana
+            </h1>
+            
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed px-4 lg:px-0">
+              Descubre cómo, al crecer y aprender en comunidad, creamos un mundo de infinitas posibilidades. 
+              Lo digital y lo humano se fusionan para que descubras tus talentos y te conviertas en un agente de cambio real.
+            </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button 
-              className="group relative w-[289px] h-[54px] bg-[#02D6D9] hover:bg-[#02D6D9]/90 transition-all duration-300 shadow-[0px_2px_5px_rgba(0,0,0,0.15)] hover:shadow-[0px_4px_8px_rgba(0,0,0,0.25)] rounded-[20px] overflow-hidden"
+              className="group relative w-full sm:w-[289px] max-w-[320px] h-[54px] bg-[#02D6D9] hover:bg-[#02D6D9]/90 transition-all duration-300 shadow-[0px_2px_5px_rgba(0,0,0,0.15)] hover:shadow-[0px_4px_8px_rgba(0,0,0,0.25)] rounded-[20px] overflow-hidden mx-auto sm:mx-0"
               style={{
                 '--fondo-boton-principal': '#02D6D9'
               } as React.CSSProperties}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center px-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-white text-xl font-bold font-nohemi leading-none">
+                  <span className="text-white text-lg sm:text-xl font-bold font-nohemi leading-none">
                     Empieza tu viaje
                   </span>
-                  <ArrowRight className="h-5 w-5 text-white transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-white transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
               

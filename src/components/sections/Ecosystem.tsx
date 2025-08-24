@@ -46,23 +46,23 @@ const Ecosystem = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 sm:py-16 lg:py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Nuestro Ecosistema Vivo
           </h2>
-          <p className="text-xl text-muted-foreground mb-6">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-4 sm:mb-6 px-4">
             Un espacio donde lo digital y lo humano se encuentran para crear impacto real.
           </p>
-          <p className="text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg max-w-4xl mx-auto leading-relaxed px-4">
             El ecosistema de Human Souls integra personas, herramientas y experiencias en un mismo lugar. 
             Es un entorno diseñado para que cada miembro pueda <strong>descubrirse, aprender, conectar y transformar</strong>. 
             Aquí todo está interconectado: perfiles, cápsulas de aprendizaje, rutas, comunidad y proyectos con impacto.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {ecosystemElements.map((element, index) => (
             <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300 border-0 group">
               <CardContent className="p-6 text-center">
