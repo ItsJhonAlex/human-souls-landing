@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Globe, BookOpen, Network, Trophy, Heart, Send } from "lucide-react";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const SoulBuddy = () => {
   const benefits = [
@@ -30,8 +31,11 @@ const SoulBuddy = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-muted/30">
-      <div className="container mx-auto">
+    <section id="soul-buddy" className="py-12 sm:py-16 lg:py-20 px-4 bg-muted/30 relative overflow-hidden">
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="light" color="cyan" />
+      
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             ¿Quieres ser parte del equipo de Soul Buddies?

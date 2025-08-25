@@ -115,6 +115,11 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-nohemi;
   }
+
+  /* Smooth scrolling for navigation */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {

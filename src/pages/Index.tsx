@@ -9,10 +9,28 @@ import Testimonials from "@/components/sections/Testimonials";
 import SoulBuddy from "@/components/sections/SoulBuddy";
 import Values from "@/components/sections/Values";
 import Footer from "@/components/sections/Footer";
+import FloatingNavbar from "@/components/ui/floating-navbar";
 
 const Index = () => {
+  const navSections = [
+    { id: 'hero', label: 'Inicio' },
+    { id: 'learning-capsules', label: 'Cápsulas' },
+    { id: 'learning-routes', label: 'Rutas' },
+    { id: 'benefits', label: 'Beneficios' },
+    { id: 'ecosystem', label: 'Ecosistema' },
+    { id: 'team', label: 'Equipo' },
+    { id: 'testimonials', label: 'Testimonios' },
+    { id: 'cta', label: 'Únete' },
+    { id: 'soul-buddy', label: 'Soul Buddy' },
+    { id: 'values', label: 'Valores' },
+    { id: 'footer', label: 'Contacto' }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Floating Navigation */}
+      <FloatingNavbar sections={navSections} />
+      
       {/* 1. Hero Section */}
       <Hero />
 

@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Lightbulb, Users, Sparkles } from "lucide-react";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const LearningRoutes = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4">
-      <div className="container mx-auto">
+    <section id="learning-routes" className="py-12 sm:py-16 lg:py-20 px-4 relative overflow-hidden">
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="light" color="cyan" />
+      
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Rutas de Aprendizaje

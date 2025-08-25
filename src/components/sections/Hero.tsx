@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-character.png";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const Hero = () => {
   return (
-    <section className="relative gradient-hero min-h-[80vh] sm:min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section id="hero" className="relative min-h-[80vh] sm:min-h-screen flex items-center justify-center px-4 overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #06B6D4 100%)'
+    }}>
       <div className="absolute inset-0 opacity-20"></div>
+      
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="heavy" color="white" />
       
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
                   <div className="text-center lg:text-left space-y-8 lg:space-y-10">

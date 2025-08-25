@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, BookOpen, Target, Globe, Sparkles, Heart } from "lucide-react";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const Benefits = () => {
   const benefits = [
@@ -37,8 +38,11 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-muted/30">
-      <div className="container mx-auto">
+    <section id="benefits" className="py-12 sm:py-16 lg:py-20 px-4 bg-muted/30 relative overflow-hidden">
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="light" color="cyan" />
+      
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Beneficios de Unirte a Human Souls
@@ -60,6 +64,7 @@ const Benefits = () => {
           ))}
         </div>
 
+        {/*
         <div className="text-center px-4">
           <Button variant="hero" size="lg" className="w-full sm:w-auto max-w-sm mx-auto min-h-[60px] sm:min-h-[48px]">
             <span className="text-sm sm:text-base leading-tight px-2 break-words hyphens-auto">
@@ -67,6 +72,7 @@ const Benefits = () => {
             </span>
           </Button>
         </div>
+        */}
       </div>
     </section>
   );

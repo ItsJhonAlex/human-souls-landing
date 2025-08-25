@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const Footer = () => {
   const navigationLinks = [
@@ -16,8 +17,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background py-12 sm:py-16 px-4">
-      <div className="container mx-auto">
+    <footer id="footer" className="bg-foreground text-background py-12 sm:py-16 px-4 relative overflow-hidden">
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="light" color="white" />
+      
+      <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">Human Souls</h3>

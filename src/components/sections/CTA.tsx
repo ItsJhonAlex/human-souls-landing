@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { StarParticles } from "@/components/ui/star-particles";
 
 const CTA = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 gradient-primary">
-      <div className="container mx-auto text-center">
+    <section id="cta" className="py-12 sm:py-16 lg:py-20 px-4 gradient-primary relative overflow-hidden">
+      {/* Sistema de Partículas de Estrellas */}
+      <StarParticles density="normal" color="white" />
+      
+      <div className="container mx-auto text-center relative z-10">
         <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white px-4">
             Empieza tu viaje hoy
