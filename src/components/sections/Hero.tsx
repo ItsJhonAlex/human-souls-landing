@@ -6,7 +6,7 @@ import { StarParticles } from "@/components/ui/star-particles";
 const Hero = () => {
   return (
     <section id="hero" className="relative min-h-[80vh] sm:min-h-screen flex items-center justify-center px-4 overflow-hidden" style={{
-      background: 'linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #06B6D4 100%)'
+      background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #581c87 75%, #1e1b4b 100%)'
     }}>
       <div className="absolute inset-0 opacity-20"></div>
       
@@ -16,12 +16,16 @@ const Hero = () => {
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
                   <div className="text-center lg:text-left space-y-8 lg:space-y-10">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-relaxed tracking-wide">
+              <span className="block mb-2 lg:mb-4 tracking-wider">Human Souls</span>
+            </h1>
+            
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-relaxed tracking-wide mb-6">
               <span className="block mb-2 lg:mb-4 tracking-wider">Únete a la primera</span>
               <span className="bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent tracking-wide"> red social </span>
               <span className="block mt-2 lg:mt-4 tracking-wider">de transformación humana</span>
-            </h1>
+            </h2>
             
-            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed px-4 lg:px-0">
+            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed px-4 lg:px-0">
               Descubre cómo, al crecer y aprender en comunidad, creamos un mundo de infinitas posibilidades. 
               Lo digital y lo humano se fusionan para que descubras tus talentos y te conviertas en un agente de cambio real.
             </p>

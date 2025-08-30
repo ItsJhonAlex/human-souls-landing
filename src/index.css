@@ -11,14 +11,14 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 100% 98%;
-    --foreground: 230 30% 15%;
+    --background: 230 35% 7%;
+    --foreground: 250 100% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 230 30% 15%;
+    --card: 230 35% 10%;
+    --card-foreground: 250 100% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 30% 15%;
+    --popover: 230 35% 10%;
+    --popover-foreground: 250 100% 98%;
 
     /* Human Souls Brand Colors */
     --primary: 262 83% 58%; /* Violet from app */
@@ -30,14 +30,14 @@ All colors MUST be HSL.
     --accent: 217 91% 60%; /* Blue from app */
     --accent-foreground: 0 0% 100%;
 
-    --muted: 250 20% 95%;
-    --muted-foreground: 230 10% 50%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 250 20% 70%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 250 20% 90%;
-    --input: 250 20% 90%;
+    --border: 230 25% 20%;
+    --input: 230 25% 15%;
     --ring: 262 83% 58%;
 
     --radius: 1rem;
@@ -154,10 +154,36 @@ All colors MUST be HSL.
   50% { transform: scale(1.05); }
 }
 
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(2, 214, 217, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(2, 214, 217, 0.8);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(0.8);
+    filter: brightness(0.8);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
+}
+
 .animate-float {
   animation: var(--animation-float);
 }
 
 .animate-bounce-soft {
   animation: var(--animation-bounce);
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
 }

@@ -66,10 +66,10 @@ export const StarSmall = ({ className = "", style = {} }: { className?: string; 
 export const StarParticles = ({ density = "normal", color = "white" }: { density?: "light" | "normal" | "heavy"; color?: string }) => {
   const getParticleCount = () => {
     switch (density) {
-      case "light": return 6;
-      case "normal": return 10;
-      case "heavy": return 16;
-      default: return 10;
+      case "light": return 8;
+      case "normal": return 15;
+      case "heavy": return 25;
+      default: return 15;
     }
   };
 
@@ -79,21 +79,31 @@ export const StarParticles = ({ density = "normal", color = "white" }: { density
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {particles.map((index) => {
-        const isLarge = Math.random() > 0.7; // 30% de probabilidad de estrella grande
+        const isLarge = Math.random() > 0.6; // 40% de probabilidad de estrella grande
         const left = Math.random() * 100;
         const top = Math.random() * 100;
-        const animationDelay = Math.random() * 4;
-        const animationDuration = 3 + Math.random() * 2;
+        const animationDelay = Math.random() * 6;
+        const animationDuration = 4 + Math.random() * 3;
         const rotation = Math.random() * 360;
-        const scale = 0.5 + Math.random() * 0.8;
-        const opacity = 0.3 + Math.random() * 0.5;
+        const scale = 0.6 + Math.random() * 1.2;
+        const opacity = 0.4 + Math.random() * 0.6;
+        
+        // Colores aleatorios para estrellas más hermosas
+        const starColors = [
+          'rgba(255, 255, 255, 0.9)', // Blanco brillante
+          'rgba(255, 215, 0, 0.8)',   // Dorado
+          'rgba(192, 192, 192, 0.8)', // Plateado
+          'rgba(255, 182, 193, 0.7)', // Rosa suave
+          'rgba(173, 216, 230, 0.7)', // Azul claro
+        ];
+        const randomColor = starColors[Math.floor(Math.random() * starColors.length)];
 
         const StarComponent = isLarge ? StarLarge : StarSmall;
 
         return (
           <div
             key={index}
-            className="absolute animate-pulse"
+            className="absolute"
             style={{
               left: `${left}%`,
               top: `${top}%`,
@@ -101,11 +111,12 @@ export const StarParticles = ({ density = "normal", color = "white" }: { density
               animationDuration: `${animationDuration}s`,
               transform: `rotate(${rotation}deg) scale(${scale})`,
               opacity: opacity,
+              animation: `twinkle ${animationDuration}s ease-in-out infinite ${animationDelay}s`,
             }}
           >
             <StarComponent 
               style={{
-                filter: `drop-shadow(0 0 8px ${color === 'white' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(2, 214, 217, 0.6)'})`,
+                filter: `drop-shadow(0 0 12px ${randomColor}) drop-shadow(0 0 20px ${randomColor}) brightness(1.2)`,
               }}
             />
           </div>
