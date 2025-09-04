@@ -10,6 +10,7 @@ import SoulBuddy from "@/components/sections/SoulBuddy";
 import Values from "@/components/sections/Values";
 import Footer from "@/components/sections/Footer";
 import FloatingNavbar from "@/components/ui/floating-navbar";
+import { ScrollProvider } from "@/contexts/ScrollContext";
 
 const Index = () => {
   const navSections = [
@@ -27,43 +28,45 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Floating Navigation */}
-      <FloatingNavbar sections={navSections} />
-      
-      {/* 1. Hero Section */}
-      <Hero />
+    <ScrollProvider>
+      <div className="min-h-screen bg-background">
+        {/* Floating Navigation */}
+        <FloatingNavbar sections={navSections} />
+        
+        {/* 1. Hero Section */}
+        <Hero />
 
-      {/* 2. Cápsulas Human Souls */}
-      <LearningCapsules />
+        {/* 2. Cápsulas Human Souls */}
+        <LearningCapsules />
 
-      {/* 3. Rutas de Aprendizaje */}
-      <LearningRoutes />
+        {/* 3. Rutas de Aprendizaje */}
+        <LearningRoutes />
 
-      {/* 4. Beneficios */}
-      <Benefits />
+        {/* 4. Beneficios */}
+        <Benefits />
 
-      {/* 5. Ecosistema Human Souls */}
-      <Ecosystem />
+        {/* 5. Ecosistema Human Souls */}
+        <Ecosystem />
 
-      {/* 6. Equipo de Trabajo */}
-      <Team />
+        {/* 6. Equipo de Trabajo */}
+        <Team />
 
-      {/* 7. Testimonios */}
-      <Testimonials />
+        {/* 7. Testimonios */}
+        <Testimonials />
 
-      {/* 8. CTA Principal */}
-      <CTA />
+        {/* 8. CTA Principal */}
+        <CTA />
 
-      {/* 9. Postúlate como Soul Buddy */}
-      <SoulBuddy />
+        {/* 9. Postúlate como Soul Buddy */}
+        <SoulBuddy />
 
-      {/* 10. Valores y Principios */}
-      <Values />
+        {/* 10. Valores y Principios */}
+        <Values />
 
-      {/* 11. Footer */}
-      <Footer />
-    </div>
+        {/* 11. Footer */}
+        <Footer />
+      </div>
+    </ScrollProvider>
   );
 };
 
