@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { User, UserCheck, Play, BookOpen, Gamepad2, Users, Calendar, Target } from "lucide-react";
 import { StarParticles } from "@/components/ui/star-particles";
+import picture1E from "@/assets/picture_1_E.jpg";
+import picture2E from "@/assets/picture_2_E.jpg";
+import picture3E from "@/assets/picture_3_E.jpg";
 
 const Ecosystem = () => {
   const ecosystemElements = [
@@ -59,11 +62,39 @@ const Ecosystem = () => {
           <p className="text-lg sm:text-xl text-muted-foreground mb-4 sm:mb-6 px-4">
             Un espacio donde lo digital y lo humano se encuentran para crear impacto real.
           </p>
-          <p className="text-base sm:text-lg max-w-4xl mx-auto leading-relaxed px-4">
-            El ecosistema de Human Souls integra personas, herramientas y experiencias en un mismo lugar. 
-            Es un entorno diseñado para que cada miembro pueda <strong>descubrirse, aprender, conectar y transformar</strong>. 
-            Aquí todo está interconectado: perfiles, cápsulas de aprendizaje, rutas, comunidad y proyectos con impacto.
-          </p>
+          
+          {/* Layout de dos columnas: texto a la izquierda, imágenes a la derecha */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4">
+            <div className="text-left">
+              <p className="text-base sm:text-lg leading-relaxed">
+                El ecosistema de Human Souls integra personas, herramientas y experiencias en un mismo lugar. 
+                Es un entorno diseñado para que cada miembro pueda <strong>descubrirse, aprender, conectar y transformar</strong>. 
+                Aquí todo está interconectado: perfiles, cápsulas de aprendizaje, rutas, comunidad y proyectos con impacto.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <img 
+                  src={picture1E} 
+                  alt="Ecosistema Human Souls 1" 
+                  className="w-full h-32 sm:h-40 object-cover rounded-xl shadow-lg"
+                />
+                <img 
+                  src={picture2E} 
+                  alt="Ecosistema Human Souls 2" 
+                  className="w-full h-32 sm:h-40 object-cover rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="flex items-center">
+                <img 
+                  src={picture3E} 
+                  alt="Ecosistema Human Souls 3" 
+                  className="w-full h-40 sm:h-48 object-cover rounded-xl shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
