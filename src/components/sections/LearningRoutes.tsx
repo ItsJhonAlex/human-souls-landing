@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, BookOpen, Lightbulb, Users, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { StarParticles } from "@/components/ui/star-particles";
+import characterLr from "@/assets/character_lr.png";
 
 const LearningRoutes = () => {
   return (
@@ -14,55 +14,57 @@ const LearningRoutes = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Rutas de Aprendizaje
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-4 px-4">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-8 px-4">
             Tu camino, paso a paso
-          </p>
-          <p className="text-base sm:text-lg max-w-3xl mx-auto px-4">
-            Avanza desde lo básico hasta el nivel experto con itinerarios claros y motivadores. 
-            Recorridos temáticos que combinan cursos, cápsulas y prácticas.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          <Card className="shadow-card hover:scale-105 transition-all duration-300 border-2 border-primary/20">
-            <CardContent className="p-6">
-              <BookOpen className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-bold text-lg mb-2">Ruta de Descubrimiento</h3>
-              <p className="text-muted-foreground text-sm">
-                Para quienes dan sus primeros pasos en su transformación personal
-              </p>
-            </CardContent>
-          </Card>
+        {/* Contenedor principal con imagen centrada y elementos textuales */}
+        <div className="relative flex justify-center items-center mb-8 sm:mb-12 min-h-[400px] sm:min-h-[500px]">
+          {/* Imagen central */}
+          <div className="relative z-10">
+            <img
+              src={characterLr}
+              alt="Character Learning Routes"
+              className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-contain"
+            />
+          </div>
           
-          <Card className="shadow-card hover:scale-105 transition-all duration-300 border-2 border-secondary/20">
-            <CardContent className="p-6">
-              <Lightbulb className="h-12 w-12 text-secondary mb-4" />
-              <h3 className="font-bold text-lg mb-2">Creatividad Aplicada</h3>
-              <p className="text-muted-foreground text-sm">
-                Transforma ideas en proyectos reales con impacto
-              </p>
-            </CardContent>
-          </Card>
+          {/* Elementos textuales posicionados alrededor de la imagen */}
+          {/* Descubrimiento - Superior izquierda */}
+          <div className="absolute top-8 left-4 sm:left-8 lg:left-16">
+            <div className="bg-gradient-to-r from-blue-500 to-teal-400 text-white px-4 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+              Descubrimiento
+            </div>
+          </div>
           
-          <Card className="shadow-card hover:scale-105 transition-all duration-300 border-2 border-accent/20">
-            <CardContent className="p-6">
-              <Users className="h-12 w-12 text-accent mb-4" />
-              <h3 className="font-bold text-lg mb-2">Conexión y Liderazgo</h3>
-              <p className="text-muted-foreground text-sm">
-                Mejora tus habilidades sociales y de liderazgo humano
-              </p>
-            </CardContent>
-          </Card>
+          {/* Creatividad Aplicada - Superior derecha */}
+          <div className="absolute top-8 right-4 sm:right-8 lg:right-16">
+            <div className="bg-gradient-to-r from-pink-500 to-purple-400 text-white px-4 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+              Creatividad Aplicada
+            </div>
+          </div>
           
-          <Card className="shadow-card hover:scale-105 transition-all duration-300 border-2 border-primary/20">
-            <CardContent className="p-6">
-              <Sparkles className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-bold text-lg mb-2">Bienestar Integral</h3>
-              <p className="text-muted-foreground text-sm">
-                Hábitos y herramientas para potenciar tu energía vital
-              </p>
-            </CardContent>
-          </Card>
+          {/* Bienestar Integral - Izquierda centro */}
+          <div className="absolute left-4 sm:left-8 lg:left-16 top-1/2 transform -translate-y-1/2">
+            <div className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-4 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+              Bienestar Integral
+            </div>
+          </div>
+          
+          {/* Conexión - Derecha centro */}
+          <div className="absolute right-4 sm:right-8 lg:right-16 top-1/2 transform -translate-y-1/2">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-400 text-white px-4 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+              Conexión
+            </div>
+          </div>
+          
+          {/* Liderazgo - Inferior centro */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div className="bg-gradient-to-r from-indigo-500 to-blue-400 text-white px-4 py-2 rounded-full font-semibold text-sm sm:text-base shadow-lg">
+              Liderazgo
+            </div>
+          </div>
         </div>
 
         <div className="text-center">

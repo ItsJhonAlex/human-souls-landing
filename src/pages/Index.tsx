@@ -10,6 +10,7 @@ import SoulBuddy from "@/components/sections/SoulBuddy";
 import Values from "@/components/sections/Values";
 import Footer from "@/components/sections/Footer";
 import FloatingNavbar from "@/components/ui/floating-navbar";
+import Navbar from "@/components/sections/Navbar";
 
 const Index = () => {
   const navSections = [
@@ -28,6 +29,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Fixed Navbar */}
+      <Navbar />
+      
       {/* Floating Navigation */}
       <FloatingNavbar sections={navSections} />
       

@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Zap, Globe, Target, Palette, Heart } from "lucide-react";
-import capsulesImage from "@/assets/learning-capsules.jpg";
+import capsulesImage from "@/assets/pictures_bg.webp";
+import picture1 from "@/assets/picture_1.png";
+import picture2 from "@/assets/picture_2.png";
+import picture3 from "@/assets/picture_3.png";
 import { StarParticles } from "@/components/ui/star-particles";
 
 const LearningCapsules = () => {
@@ -26,11 +29,34 @@ const LearningCapsules = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
-          <div>
+          <div className="relative">
             <img 
               src={capsulesImage} 
               alt="Cápsulas de Aprendizaje" 
               className="w-full rounded-3xl shadow-card"
+            />
+            {/* Picture 1 - Superior derecha, desplazada izquierda 150px y abajo 50px */}
+            <img
+              src={picture1}
+              alt="Picture 1"
+              className="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-xl shadow-lg object-cover"
+              style={{ top: 'calc(1rem + 50px)', right: 'calc(1rem + 150px)' }}
+            />
+            
+            {/* Picture 2 - Centro izquierda, sin desplazamiento horizontal */}
+            <img
+              src={picture2}
+              alt="Picture 2"
+              className="absolute top-1/2 transform -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-xl shadow-lg object-cover"
+              style={{ left: '1rem' }}
+            />
+            
+            {/* Picture 3 - Inferior centrado, desplazada arriba 50px */}
+            <img
+              src={picture3}
+              alt="Picture 3"
+              className="absolute left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-xl shadow-lg object-cover"
+              style={{ bottom: 'calc(1rem + 50px)' }}
             />
           </div>
           

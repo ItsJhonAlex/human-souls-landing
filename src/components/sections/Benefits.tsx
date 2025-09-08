@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, BookOpen, Target, Globe, Sparkles, Heart } from "lucide-react";
 import { StarParticles } from "@/components/ui/star-particles";
+import pictureB from "@/assets/picture_b.png";
 
 const Benefits = () => {
   const benefits = [
@@ -62,6 +63,17 @@ const Benefits = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Imagen complementaria después de las cards */}
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="relative">
+            <img
+              src={pictureB}
+              alt="Oportunidades Globales"
+              className="w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl shadow-card object-cover"
+            />
+          </div>
         </div>
 
         {/*
